@@ -534,6 +534,9 @@ input {
     width: 190px;
     padding: 1rem;
   }
+  .home__data-subtitle {
+    margin-top: 20px;
+  }
 }
 
 /* Medium devices */
@@ -743,6 +746,10 @@ input {
     margin-right: 80px;
     grid-template-columns: 1.8fr 1fr;
   }
+  .home__data-subtitle {
+    margin-top: 20px;
+  }
+
   .home__img {
     position: relative;
     width: 500px;
