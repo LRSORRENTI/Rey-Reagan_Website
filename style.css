@@ -1,7 +1,7 @@
 /*Variables Css*/
 :root {
   --header-height: 3rem;
-  --paua-color: #130f49;
+  --paua-color: #2e2886;
   --pattens-blue-color: #d9f4ff;
   --sunglow-color: #ffd32c;
   --pattens2-blue-color: #cce8fd;
@@ -606,7 +606,7 @@ input {
   }
   .target__title {
     margin-bottom: var(--mb-1-5);
-    color: #130f49;
+    color: var(--paua-color);
   }
   .target__description {
     margin-bottom: var(--mb-2);
