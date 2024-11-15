@@ -1,7 +1,7 @@
 /*Variables Css*/
 :root {
   --header-height: 3rem;
-  --paua-color: #2e2886;
+  /* --paua-color: #2e2886; */
   --pattens-blue-color: #d9f4ff;
   --sunglow-color: #ffd32c;
   --pattens2-blue-color: #cce8fd;
@@ -79,13 +79,13 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  color: var(--text-color);
+  color: #130f49;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--paua-color);
+  /* color: var(--paua-color); */
   font-weight: var(--font-semi-bold);
   font-family: var(--title-font);
 }
@@ -128,7 +128,7 @@ input {
 
 .section__title {
   font-size: var(--h2-font-size);
-  color: #130f49;
+  /* color: #130f49; */
   text-transform: capitalize;
   margin-bottom: var(--mb-2);
 }
@@ -195,12 +195,12 @@ input {
 }
 
 .app__btn_dark {
-  background-color: var(--paua-color);
+  /* background-color: var(--paua-color); */
   color: var(--white-color);
 }
 .app_btn span {
   opacity: 1;
-  color: #130f49;
+  /* color: #130f49; */
   font-size: 1.4rem;
 }
 
@@ -249,7 +249,7 @@ input {
 
 .home__data-subtitle,
 .home__data-title {
-  color: var(--paua-color);
+  /* color: var(--paua-color); */
 }
 
 .home__data-subtitle {
@@ -278,7 +278,7 @@ input {
 
 .button {
   display: inline-block;
-  background-color: var(--paua-color);
+  /* background-color: var(--paua-color); */
   color: var(--white-color);
   padding: 1.25rem 2.25rem;
   border-radius: 1.25rem;
@@ -320,7 +320,7 @@ input {
   font-size: 24px;
   line-height: 35px;
   letter-spacing: -0.01em;
-  color: #130f49;
+  /* color: #130f49; */
   opacity: 0.4;
 }
 
@@ -453,7 +453,7 @@ input {
 }
 
 #grid-h3 {
-  color: #130f49;
+  /* color: var(--paua-color); */
   margin: auto;
   display: flex;
   text-align: center;
