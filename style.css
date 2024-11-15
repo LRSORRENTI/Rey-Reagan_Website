@@ -3,19 +3,14 @@
   --header-height: 3rem;
   --paua-color: #130f49;
   --pattens-blue-color: #d9f4ff;
-  --we-peep-color: #fecfd0;
-  --cranberry-color: #e35168;
-  --navajo-white-color: #fedfb1;
   --sunglow-color: #ffd32c;
   --pattens2-blue-color: #cce8fd;
-
   --body-color: white;
   --white-color: #fff;
   --scroll-bar-color: #dcedfa;
   --scroll-thumb-color: #9edefc;
-
-  --body-font: "Euclid Circular B";
-  --title-font: "Euclid Circular B";
+  --body-font: "Lato", sans-serif;
+  --title-font: "Playfair Display", serif;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 4.25rem;
@@ -307,9 +302,6 @@ input {
   background: none;
 }
 
-.scroll-header {
-}
-
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
   color: var(--title-color);
@@ -376,6 +368,127 @@ input {
 
 .target__img-overlay img {
   height: 100%;
+}
+
+/* FULLSCREEN IMAGE STYLES */
+
+/* Hover effect for images */
+.grid-wrapper > div > img {
+  position: relative;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.grid-wrapper > div > img:hover {
+  filter: grayscale(0.5);
+}
+
+.grid-wrapper {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Eye icon overlay */
+/* Icon overlay styling */
+.grid-wrapper > div {
+  position: relative;
+}
+
+.grid-wrapper > div ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.grid-wrapper > div:hover ion-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Fullscreen view styles */
+.fullscreen-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.fullscreen-view.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fullscreen-view img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#grid-h3 {
+  color: #130f49;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.grid-wrapper > img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.grid-wrapper {
+  background-color: #d9f4ff;
+  margin-top: 4rem;
+}
+
+/* Flex centering for individual items */
+.grid-wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+.grid-wrapper > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .scrollup {
@@ -663,7 +776,7 @@ input {
     display: flex;
     font-weight: var(--font-regular);
     margin-bottom: 2.25rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2.063rem;
     letter-spacing: -0.01em;
     margin-top: 70px;
@@ -707,44 +820,6 @@ input {
   section#target {
     padding: 200px 0 0;
   }
-}
-
-#grid-h3 {
-  color: #130f49;
-  margin: auto;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 4rem;
-  margin-top: 2rem;
-}
-
-.grid-wrapper > img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.grid-wrapper {
-  background-color: #d9f4ff;
-  margin-top: 4rem;
-}
-
-/* Flex centering for individual items */
-.grid-wrapper > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Image styling */
-.grid-wrapper > div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
 }
 
 /* Desktop and tablet layout (above 768px) */
@@ -807,86 +882,4 @@ input {
     height: auto;
     object-fit: cover;
   }
-}
-
-/* FULLSCREEN IMAGE STYLES */
-
-/* Hover effect for images */
-.grid-wrapper > div > img {
-  position: relative;
-  cursor: pointer;
-  transition: filter 0.3s ease;
-}
-
-.grid-wrapper > div > img:hover {
-  filter: grayscale(0.5);
-}
-
-.grid-wrapper {
-  max-width: 90%;
-  margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Eye icon overlay */
-/* Icon overlay styling */
-.grid-wrapper > div {
-  position: relative;
-}
-
-.grid-wrapper > div ion-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.8);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-}
-
-.grid-wrapper > div:hover ion-icon {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* Fullscreen view styles */
-.fullscreen-view {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.fullscreen-view.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.fullscreen-view img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
-#close-btn {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  font-size: 2rem;
-  color: #fff;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
