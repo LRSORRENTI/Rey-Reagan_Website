@@ -260,6 +260,7 @@ input {
   line-height: 2.063rem;
   letter-spacing: -0.01em;
   margin-top: 70px;
+  margin-left: 5px;
 }
 
 .br_bottom {
@@ -736,7 +737,7 @@ input {
   }
 }
 
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 500px) {
   .home__container {
     display: flex;
     flex-direction: column;
