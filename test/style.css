@@ -1,0 +1,39 @@
+:root {
+  --title-font: "Playfair Display", serif;
+  --lato: "Lato", serif;
+}
+
+.hero-wrap {
+  margin-left: 3.5rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-hero-wrap {
+  display: flex;
+}
+
+.hero-wrap h1 {
+  color: #130f49;
+  font-family: var(--title-font);
+  font-size: 5rem;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.hero-wrap p:nth-of-type(1) {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 8px;
+  font-size: 2rem;
+  font-family: "Lato", serif;
+  color: #130f49;
+}
+
+.hero-wrap p:nth-of-type(2) {
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-top: 0px;
+  font-size: 1.7rem;
+}
