@@ -14,7 +14,7 @@
     <link rel="icon" type="image/ico" href="./images/ReyChair.png" />
   </head>
   <body>
-    <div class="hero-wrap">
+    <div class="hero-wrap fade-in">
       <div id="hero-wrap-text">
         <h1>Reagan</h1>
         <div class="inner-hero-wrap">
@@ -26,5 +26,30 @@
         <img id="hero-img" src="./images/hero.png" alt="Picture of rey" />
       </div>
     </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.05 // Trigger the callback when 10% of the element is visible
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in-visible");
+                observer.unobserve(entry.target); // Stop observing once the element is visible
+            }
+        });
+    }, observerOptions);
+  
+    // Select all elements to observe
+    const elementsToObserve = document.querySelectorAll(".fade-in");
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
+    });
+  });
+    </script>
   </body>
 </html>
