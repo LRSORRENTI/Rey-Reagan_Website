@@ -15,26 +15,19 @@
     <link rel="icon" type="image/ico" href="./images/ReyChair.png" />
   </head>
   <body>
-    <main class="main">
-      <section class="home" id="home">
-        <div class="home__container container grid">
-          <div class="home__data">
-            <h1 class="home__data-title">
-              Reagan
-              <br />
-            </h1>
-            <span class="home__data-subtitle">
-              2014 - 2024<span class="br_bottom br_sunglow"></span
-              >&nbsp;&nbsp;🐾💕</span
-            >
-          </div>
-
-          <div class="home__img">
-            <img src="images/ReyChair.png" alt="" />
-          </div>
+    <div class="hero-wrap fade-in">
+      <div id="hero-wrap-text">
+        <h1>Reagan</h1>
+        <div class="inner-hero-wrap">
+          <p>2014 - 2024</p>
+          <p>🐾💕</p>
         </div>
-      </section>
-
+      </div>
+      <div id="hero-img-wrap">
+        <img id="hero-img" src="./images/hero.png" alt="Picture of rey" />
+      </div>
+    </div>
+    <main class="main">
       <section class="target section" id="target">
         <div class="target__container container grid" id="target">
           <div class="target__img">
@@ -274,6 +267,29 @@
         if (e.target !== fullscreenImg) {
           fullscreenView.classList.remove("active");
         }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          root: null, // Use the viewport as the root
+          rootMargin: "0px",
+          threshold: 0.05, // Trigger the callback when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in-visible");
+              observer.unobserve(entry.target); // Stop observing once the element is visible
+            }
+          });
+        }, observerOptions);
+
+        // Select all elements to observe
+        const elementsToObserve = document.querySelectorAll(".fade-in");
+        elementsToObserve.forEach((element) => {
+          observer.observe(element);
+        });
       });
     </script>
 
