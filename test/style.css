@@ -65,7 +65,13 @@
   align-items: center;
   margin: auto;
   margin-right: 170px;
-  border-radius: 3px;
+  border-radius: 50px;
+}
+
+@media screen and (min-width: 500px) {
+  #hero-img {
+    width: 650px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
