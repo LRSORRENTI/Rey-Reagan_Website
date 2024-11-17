@@ -317,7 +317,6 @@ input {
 }
 
 
-
 .br_bottom {
   border-bottom: 2px solid;
 }
@@ -701,8 +700,6 @@ input {
   }
 
 }
-
-
 
 
 @media screen and (max-width: 552px) {
